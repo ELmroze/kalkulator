@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kalkulator.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <Label
+            x:Name="walut1"
+            HorizontalTextAlignment="End"
+            />
+        <Label
+            x:Name="walut2"
+            HorizontalTextAlignment="End"
+            />
+        <HorizontalStackLayout>
+            <VerticalStackLayout RadioButtonGroup.GroupName="waluta1">
+                <RadioButton
+                    x:Name="ZPLN"
+                    Content="PLN"
+                    GroupName="waluta1"
+                    CheckedChanged="waluty" IsChecked="True"
+                    />
+                <RadioButton
+                    x:Name="ZDolary"
+                    Content="Dolary"
+                    GroupName="waluta1"
+                    CheckedChanged="waluty"
+                    />
+                <RadioButton
+                    x:Name="ZEURO"
+                    Content="EURO"
+                    GroupName="waluta1"
+                    CheckedChanged="waluty"
+                    />
+            </VerticalStackLayout>
+            
+            <VerticalStackLayout RadioButtonGroup.GroupName="waluta2">
+                <RadioButton
+                    x:Name="DoPLN"
+                    Content="PLN"
+                    GroupName="waluta2"
+                    CheckedChanged="waluty"
+                    />
+                <RadioButton
+                    x:Name="DoDolary"
+                    Content="Dolary"
+                    GroupName="waluta2"
+                    CheckedChanged="waluty" IsChecked="True" 
+                    />
+                <RadioButton
+                    x:Name="DoEURO"
+                    Content="EURO"
+                    GroupName="waluta2"
+                    CheckedChanged="waluty"
+                    />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        <Slider
+            ValueChanged="pieniadze"
+            Maximum="1000"/>
+    </VerticalStackLayout>
+</ContentPage>
